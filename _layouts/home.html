@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  {{ content }}
+
+  <h1 class="page-heading">Main event here</h1>
+  
+
+  <ul class="post-list">
+    {% for event in site.events limit:1 %}
+      <li>
+        <span class="post-meta">{{ event.showdate | date: "%b %-d, %Y" }}</span>
+		{{ event.times }}
+        <h2>
+          <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  
+  <h1> Past events </h1>
+  
+  <ul class="post-list">
+    {% for event in site.events|sort:"price" offset:1 %}
+      <li>
+        <span class="post-meta">{{ event.showdate | date: "%b %-d, %Y" }}</span>
+		{{ event.times }}
+        <h2>
+          <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+  
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
