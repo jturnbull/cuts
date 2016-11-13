@@ -1,25 +1,9 @@
 ---
 layout: default
 ---
+{% assign events = site.events | sort: 'showdate' | reverse %}
 
-<!-- 
-  
-  <h1> Past events </h1>
-  
-  <ul class="post-list">
-    {% for event in site.events|sort:"price" offset:1 %}
-      <li>
-        <span class="post-meta">{{ event.showdate | date: "%b %-d, %Y" }}</span>
-		
-        <h2>
-          <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
- -->
-
-{% for event in site.events limit:1 %}
+{% for event in events limit:1 %}
 	<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted" id="header1-2" data-bg-video="https://www.youtube.com/embed/kERmk3jJQTY?rel=0&amp;autoplay=1&amp;loop=1">
 	    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar">
 	        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);"></div>
@@ -29,7 +13,7 @@ layout: default
 	                    <div class="mbr-hero animated fadeInUp">
 							 <p class="mbr-hero__intro">Cinema Under The Stairs presents…</p>
 	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
-	                        <p class="mbr-hero__subtext">{{ event.showdate | date: "%b %-d, %Y" }} Sunday 27th November 2016<br>{{ event.times }}<br>18+ only. Tickets £4<br>Alcohol served, popcorn popped<br>@ The Cellar, Oxford, OX1 3HZ</p>
+	                        <p class="mbr-hero__subtext">{{ event.showdate | date: "%A %d %B %Y" }}<br>{{ event.times }}<br>18+ only. Tickets £4<br>Alcohol served, popcorn popped<br>@ The Cellar, Oxford, OX1 3HZ</p>
 	                    </div>
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">BUY TICKETS</a>
 							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="https://www.facebook.com/CinemaUnderTheStairs"><i class="socicon socicon-facebook"></i></a>         
@@ -47,6 +31,28 @@ layout: default
 	    </div>
 	</section>
 {% endfor %}
+
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="col-sm-8 col-sm-offset-2">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+	                            <h2 class="mbr-header__text">CINEMA UNDER THE STAIRS</h2>
+	                        </div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
 
 	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
     
@@ -79,4 +85,38 @@ layout: default
 	        </div>
 	    </div>
 	</section>
+	
+	
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+	                            <h2 class="mbr-header__text">PREVIOUS FILMS</h2>
+	                        </div>
+
+					      {% for event in events offset:1 %}
+					        <div class="col-sm-4" style="min-height: 120px;">
+  					          <h2>
+  					            <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+  					          </h2>
+					          <span class="post-meta">{{ event.showdate | date: "%b %-d, %Y" }}</span>
+							  </div>
+
+					      {% endfor %}
+
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
+	
+  
+
 	
