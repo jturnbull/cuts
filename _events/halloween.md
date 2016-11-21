@@ -4,6 +4,7 @@ showdate: 2016-10-30
 times: "Doors 7:00pm / Films 8:00pm"
 price: 6
 fb_link: https://www.facebook.com/events/707050059444387/
+poster_thumb: /assets/posters/halloween.jpg
 ---
 With a wicked grin and a maniacal laugh, Cinema Under The Stairs invites you to our Halloween horror double bill!
 
