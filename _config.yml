@@ -26,6 +26,14 @@ collections:
   events:
     output: true
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+
 # Build settings
 markdown: kramdown
 theme: minima
