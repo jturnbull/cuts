@@ -1,6 +1,6 @@
 ---
 title: "The Outsiders"
-showdate: 2016-01-16
+showdate: 2017-01-16
 times: "Doors 7:30pm / Film 8:30pm"
 price: 4
 clip_id: "gOOXa_40v4Q"
