@@ -5,6 +5,7 @@ times: "Doors 7:30pm / Film 8:30pm"
 price: 4
 clip_id: "kERmk3jJQTY"
 booking_link: "https://www.wegottickets.com/event/380464"
+fb_link: https://www.facebook.com/events/213728052388876/
 poster_thumb: /assets/posters/critters.jpg
 ---
 After the Oscar winning Dr. zhivago and Lawrence of Arabia, Sir David Lean was stumped for decades as to how he could follow up such polymesmeric masterpieces.
