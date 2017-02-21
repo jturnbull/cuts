@@ -3,7 +3,7 @@ title: "Shogun Assassin"
 showdate: 2017-03-13
 times: "Doors 7:30pm / Film 8:30pm"
 price: 4
-clip_id: "QGItefWwA5s"
+clip_id: "41UGyylAI4k"
 booking_link: http://www.wegottickets.com/event/391569
 fb_link: https://www.facebook.com/events/269003790190095/
 poster_thumb: /assets/posters/shogun.jpg
