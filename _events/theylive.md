@@ -1,6 +1,6 @@
 ---
 title: "They Live"
-showdate: 2017-03-30
+showdate: 2017-04-03
 times: "Doors 7:30pm / Film 8:30pm"
 price: 4
 clip_id: "JI8AMRbqY6w"
