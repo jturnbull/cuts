@@ -13,10 +13,10 @@ layout: default
 	                    <div class="mbr-hero animated fadeInUp">
 							 <p class="mbr-hero__intro">Cinema Under The Stairs presents…</p>
 	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
-	                        <p class="mbr-hero__subtext">{{ event.showdate | date: "%A %d %B %Y" }}<br>{{ event.times }}<br>18+ only. Tickets £4<br>Alcohol served, popcorn popped<br>@ The Cellar, Oxford, OX1 3HZ</p>
+	                        <p class="mbr-hero__subtext">{{ event.showdate | date: "%A %d %B %Y" }}<br>{{ event.times }}<br>18+ only. Tickets £{{event.price}}<br>Alcohol, popcorn, and prizes<br>@ The Cellar, Oxford, OX1 3HZ</p>
 	                    </div>
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">BUY TICKETS</a>
-							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="https://www.facebook.com/CinemaUnderTheStairs"><i class="socicon socicon-facebook"></i></a>         
+							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{{ event.fb_link }}"><i class="socicon socicon-facebook"></i></a>         
 						
 						
 						 </div>
