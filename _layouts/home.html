@@ -13,7 +13,11 @@ layout: default
 	                    <div class="mbr-hero animated fadeInUp">
 							 <p class="mbr-hero__intro">Cinema Under The Stairs presents…</p>
 	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
-	                        <p class="mbr-hero__subtext">{{ event.showdate | date: "%A %d %B %Y" }}<br>{{ event.times }}<br>18+ only. Tickets £{{event.price}}<br>Alcohol, popcorn, and prizes<br>@ The Cellar, Oxford, OX1 3HZ</p>
+	                        <p class="mbr-hero__subtext">
+								{% assign day = event.showdate | date: "%-d"  %}
+								{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+								{{ event.showdate | date: "%B %Y" }}
+								<br>{{ event.times }}<br>18+ only. Tickets £{{event.price}}<br>Alcohol, popcorn, and prizes<br>@ The Cellar, Oxford, OX1 3HZ</p>
 	                    </div>
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">BUY TICKETS</a>
 							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{{ event.fb_link }}"><i class="socicon socicon-facebook"></i></a>         
@@ -94,7 +98,9 @@ favourites on a big screen, with salty popcorn and a cold one, surrounded by lik
   					          <h2>
   					            <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
   					          </h2>
-					          <span class="post-meta">{{ event.showdate | date: "%b %-d, %Y" }}</span>
+					          <span class="post-meta">{% assign day = event.showdate | date: "%-d"  %}
+								{{ event.showdate | date: "%-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+								{{ event.showdate | date: "%B %Y" }}</span>
 							  </div>
 							  </div>
 
