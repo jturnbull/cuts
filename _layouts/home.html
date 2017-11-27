@@ -16,8 +16,9 @@ layout: default
 	                        <p class="mbr-hero__subtext">
 								{% assign day = event.showdate | date: "%-d"  %}
 								{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
-								{{ event.showdate | date: "%B %Y" }}
-								<br>{{ event.times }}<br>18+ only. Tickets £{{event.price}}<br>Alcohol, popcorn, and prizes<br>@ The Cellar, Oxford, OX1 3HZ</p>
+								{{ event.showdate | date: "%B %Y" }}<br>
+								@ {{ event.location | default:"The Cellar, Oxford, OX1 3HZ" }}
+								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}<br>Tickets only £{{event.price |default:"4"}}. 18+ only<br>Alcohol, popcorn, and prizes available</p>
 	                    </div>
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">BUY TICKETS</a>
 							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{{ event.fb_link }}"><i class="socicon socicon-facebook"></i></a>         
@@ -38,12 +39,13 @@ layout: default
 
 	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
     
-	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" >
 	        <div class="row">
 	            <div class="col-sm-12">
 	                <div class="row">
 	                    <div class="col-sm-8 col-sm-offset-2">
 	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+						
 	                            <h2 class="mbr-header__text">CINEMA UNDER THE STAIRS</h2>
 	                        </div>
 							<p>We are six local chaps who love cinema.</p>
@@ -61,7 +63,7 @@ favourites on a big screen, with salty popcorn and a cold one, surrounded by lik
 
 <p>Welcome to CINEMA UNDER THE STAIRS</p>
 
-<img src="/assets/images/largelogo.png" width="142" height="128" alt="Largelogo">
+
 
 	                    </div>
 	                </div>
@@ -71,6 +73,14 @@ favourites on a big screen, with salty popcorn and a cold one, surrounded by lik
 	    </div>
 	</section>
 	
+
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: #ffdf18;">
+
+<div class="mbr-header mbr-header--center mbr-header--std-padding" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+		                            <h2 class="mbr-header__text"><img src="/assets/images/largelogo.png" width="142" height="128" alt="CINEMA UNDER THE STAIRS"></h2>
+									
+								</div>
+</section>
 
 	
 	
