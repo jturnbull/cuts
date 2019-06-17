@@ -3,7 +3,7 @@ title: "Alien"
 showdate: 2019-06-24
 clip_id: "nPQ7om598OM"
 price: 4
-location: "Tap Social Movement, Curtis Industrial Estate, OX2 0LX"
+location: "TAP Social Movement, Curtis Industrial Estate, OX2 0LX"
 booking_link: http://www.wegottickets.com/event/475142
 fb_link: https://www.facebook.com/events/1789705787732553/
 ---
