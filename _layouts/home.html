@@ -28,10 +28,17 @@ layout: default
 								{{ event.showdate | date: "%B %Y" }}<br>
 								@ {{ event.location | default:"The Cellar, Oxford, OX1 3HZ" }}
 								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}<br>Tickets £{{event.price |default:"4"}}. 18+ only<br>Alcohol, popcorn, and prizes available</p>
+								
 	                    </div>
-	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">BUY TICKETS</a>
-							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a> <a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{{ event.fb_link }}"><i class="socicon socicon-facebook"></i></a>         
-						
+						{% if event.booking_link %}
+	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
+						{% else %}
+						<div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="" target="_blank">TICKETS SOON…</a>
+						{% endif %}
+							<a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{% if event.fb_link %}{{ event.fb_link }}{% else %}https://www.facebook.com/CinemaUnderTheStairs/{% endif %}"><i class="socicon socicon-facebook"></i></a>    
+							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a>   
+							<a class="mbr-social-icons__icon socicon-bg-instagram  animated fadeInUp delay" title="instagram" target="_blank" href="https://www.instagram.com/cinemaunderthestairs/"><i class="socicon socicon-instagram"></i></a>   
+							<a class="mbr-social-icons__icon socicon-bg-youtube  animated fadeInUp delay" title="YouTube" target="_blank" href="https://www.youtube.com/channel/UC0ZT57W41MRCK3OiPv01CNQ"><i class="socicon socicon-youtube"></i></a>  
 						
 						 </div>
 	                </div></div>
@@ -57,16 +64,16 @@ layout: default
 						
 	                            <h2 class="mbr-header__text">CINEMA UNDER THE STAIRS</h2>
 	                        </div>
-							<p>We are six local chaps who love cinema.</p>
+							<p>We are six local losers who love cinema.</p>
 
-<o>One evening in a pub, we discussed if we owned a 
+<p>One evening in a pub, we discussed if we owned a 
 cinema, what would that cinema be. It would have to show our favourite movies, the opportunity to watch classics from the past on the big screen again was a must. 
-Tickets would be cheap, akin to the ‘Dollar Theatres’ from America. The place would be full of friendly folk in a laid back environment, as if you were watching at a friend’s house. In which case, alcohol was a must.</o>
+Tickets would be cheap, akin to the ‘Dollar Theatres’ from America. The place would be full of friendly folk in a laid back environment, as if you were watching at a friend’s house. In which case, alcohol was a must.</p>
 
 <p>The sound and picture quality, although important would not be paramount. The most important thing is that it would become a meeting point, a place to catch old 
 favourites on a big screen, with salty popcorn and a cold one, surrounded by like-minded strangers.</p>
 
-<p>Those strangers would eventually become familiar faces and friends. A monthly experience which would hopefully become a ritual for film fans in our city.</p>
+<p>Those strangers would eventually become familiar faces and friends. A monthly experience which would become a ritual for film fans in our city.</p>
 
 <p>So we decided to create that cinema.</p>
 
@@ -82,21 +89,33 @@ favourites on a big screen, with salty popcorn and a cold one, surrounded by lik
 	    </div>
 	</section>
 	
-
-	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: #ffdf18;">
-
-<div class="mbr-header mbr-header--center mbr-header--std-padding" style="padding-top: 40.8px; padding-bottom: 40.8px;">
-		                            <h2 class="mbr-header__text"><img src="/assets/images/largelogo.png" width="142" height="128" alt="CINEMA UNDER THE STAIRS"></h2>
-									
-								</div>
-</section>
-
-	
 	
 
 {% include subscribe.html %}
 
 {% include parallax.html %}
+	
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+	                            <h2 class="mbr-header__text">CUTS PODCAST</h2>
+								<p>Listen to the latest episode of the 5-star rated CUTS podcast…
+	                        </div>
+							<iframe src="https://anchor.fm/cuts/embed" height="202px" width="600px" frameborder="0" scrolling="no" style="display: block; margin: 0 auto;"></iframe>
+	</div></div></div></div></div></section>
+	
+		<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: #ffdf18;">
+
+	<div class="mbr-header mbr-header--center mbr-header--std-padding" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+			                            <h2 class="mbr-header__text"><img src="/assets/images/largelogo.png" width="142" height="128" alt="CINEMA UNDER THE STAIRS"></h2>
+									
+									</div>
+	</section>
 	
 	
 	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">

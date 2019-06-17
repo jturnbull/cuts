@@ -13,6 +13,13 @@ layout: default
 	                <div class="row">
 	                    <div class="col-sm-8 col-sm-offset-2">
 	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+								
+								{% if page.poster_thumb %}
+								<div style="float:right; height: 371px; margin: 20px 0px 20px 40px; text-align: center;">
+									<img src="{{ page.poster_thumb | relative_url }}" alt="">
+	  					          </div>
+								{% endif %}
+								
 	                            <h2 class="mbr-header__text">{{ page.title }}</h2>
 								<h4>{{ page.showdate | date: "%b %-d, %Y" }}</h4>
 								
