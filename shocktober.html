@@ -3,6 +3,23 @@ layout: default
 ---
 {% assign events = site.events_shocktober | sort: 'showdate' %}
 
+
+{% for event in events %}
+<h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
+ <p class="mbr-hero__subtext">
+{% assign day = event.showdate | date: "%-d"  %}
+{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+{{ event.showdate | date: "%B %Y" }}<br>
+@ {{ event.location }}
+<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+
+</div>
+{% if event.booking_link %}
+<div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
+{% else %}
+{% endif %}
+
+{% endfor %}
+
 {% for event in events limit:1 %}
 	<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted" id="header1-2" data-bg-video="https://www.youtube.com/embed/{{ event.clip_id }}?rel=0&amp;autoplay=1&amp;loop=1">
 	    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar">
