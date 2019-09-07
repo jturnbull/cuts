@@ -25,6 +25,8 @@ github_username:  jekyll
 collections:
   events:
     output: true
+  events_shocktober:
+    output: true
 
 defaults:
   -

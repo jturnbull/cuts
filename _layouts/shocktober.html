@@ -1,0 +1,160 @@
+---
+layout: default
+---
+{% assign events = site.events_shocktober | sort: 'showdate' %}
+
+{% for event in events limit:1 %}
+	<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted" id="header1-2" data-bg-video="https://www.youtube.com/embed/{{ event.clip_id }}?rel=0&amp;autoplay=1&amp;loop=1">
+	    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar">
+	        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(34, 34, 34);"></div>
+	        <div class="mbr-box__container mbr-section__container container">
+	            <div class="mbr-box mbr-box--stretched"><div class="mbr-box__magnet mbr-box__magnet--center-left">
+
+	                <div class="row">
+						<div class=" col-sm-3 col-sm-offset-3">
+	                    <div class="animated fadeInUp">
+						
+								<img src="{{ event.poster_thumb | relative_url }}" alt="">
+						</div>
+						</div>
+						<div class=" col-sm-6">
+						
+	                    <div class="mbr-hero animated fadeInUp">
+							 <p class="mbr-hero__intro">Cinema Under The Stairs presents…</p>
+	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
+	                        <p class="mbr-hero__subtext">
+								{% assign day = event.showdate | date: "%-d"  %}
+								{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+								{{ event.showdate | date: "%B %Y" }}<br>
+								@ {{ event.location | default:"The Cellar, Oxford, OX1 3HZ" }}
+								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+<br>
+								Alcohol, popcorn, and prizes available<br>
+								<b>Limited tickets drop {{ event.showdate | date: "%-d" | minus:7 }} {{ event.showdate | date: "%B" }}</b></p>
+								
+	                    </div>
+						{% if event.booking_link %}
+	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
+						{% else %}
+						{% endif %}
+							<a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{% if event.fb_link %}{{ event.fb_link }}{% else %}https://www.facebook.com/CinemaUnderTheStairs/{% endif %}"><i class="socicon socicon-facebook"></i></a>    
+							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a>   
+							<a class="mbr-social-icons__icon socicon-bg-instagram  animated fadeInUp delay" title="instagram" target="_blank" href="https://www.instagram.com/cinemaunderthestairs/"><i class="socicon socicon-instagram"></i></a>   
+							<a class="mbr-social-icons__icon socicon-bg-youtube  animated fadeInUp delay" title="YouTube" target="_blank" href="https://www.youtube.com/channel/UC0ZT57W41MRCK3OiPv01CNQ"><i class="socicon socicon-youtube"></i></a>  
+						
+						 </div>
+	                </div></div>
+	            </div></div>
+	        </div>
+	        <div class="mbr-arrow mbr-arrow--floating text-center">
+	            <div class="mbr-section__container container">
+	                <a class="mbr-arrow__link" href="#social-buttons2-3"><i class="glyphicon glyphicon-menu-down"></i></a>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+{% endfor %}
+
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" >
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="col-sm-8 col-sm-offset-2">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+						
+	                            <h2 class="mbr-header__text">CINEMA UNDER THE STAIRS</h2>
+	                        </div>
+							<p>We are six local losers who love cinema.</p>
+
+<p>One evening in a pub, we discussed if we owned a 
+cinema, what would that cinema be. It would have to show our favourite movies, the opportunity to watch classics from the past on the big screen again was a must. 
+Tickets would be cheap, akin to the ‘Dollar Theatres’ from America. The place would be full of friendly folk in a laid back environment, as if you were watching at a friend’s house. In which case, alcohol was a must.</p>
+
+<p>The sound and picture quality, although important would not be paramount. The most important thing is that it would become a meeting point, a place to catch old 
+favourites on a big screen, with salty popcorn and a cold one, surrounded by like-minded strangers.</p>
+
+<p>Those strangers would eventually become familiar faces and friends. A monthly experience which would become a ritual for film fans in our city.</p>
+
+<p>So we decided to create that cinema.</p>
+
+<p>Welcome to CINEMA UNDER THE STAIRS</p>
+
+
+
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
+	
+
+{% include subscribe.html %}
+
+{% include parallax.html %}
+	
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="podcast2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+	                            <h2 class="mbr-header__text">CUTS PODCAST</h2>
+								<p>Listen to the latest episode of the 5-star rated CUTS podcast…
+	                        </div>
+							<iframe src="https://anchor.fm/cuts/embed" height="202px" width="600px" frameborder="0" scrolling="no" style="display: block; margin: 0 auto;"></iframe>
+	</div></div></div></div></div></section>
+	
+		<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: #ffdf18;">
+
+	<div class="mbr-header mbr-header--center mbr-header--std-padding" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+			                            <h2 class="mbr-header__text"><img src="/assets/images/largelogo.png" width="142" height="128" alt="CINEMA UNDER THE STAIRS"></h2>
+									
+									</div>
+	</section>
+	
+	
+	<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="form2-6" style="background-color: rgb(239, 239, 239);">
+    
+	    <div class="mbr-section__container mbr-section__container--sm-padding container" style="padding-top: 40.8px; padding-bottom: 40.8px;">
+	        <div class="row">
+	            <div class="col-sm-12">
+	                <div class="row">
+	                    <div class="">
+	                        <div class="mbr-header mbr-header--center mbr-header--std-padding">
+	                            <h2 class="mbr-header__text">PREVIOUS FILMS</h2>
+	                        </div>
+
+					      {% for event in events offset:1 %}
+					        <div class="col-sm-4">
+							<div style="height: 371px; margin: 0 20px 20px 20px; text-align: center;">
+								<img src="{{ event.poster_thumb | relative_url }}" alt="">
+  					          <h2>
+  					            <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
+  					          </h2>
+					          <span class="post-meta">{% assign day = event.showdate | date: "%-d"  %}
+								{{ event.showdate | date: "%-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+								{{ event.showdate | date: "%B %Y" }}</span>
+							  </div>
+							  </div>
+
+					      {% endfor %}
+
+	                    </div>
+	                </div>
+
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	
+	
+  {% include subscribe.html %}
+  
+
+	
