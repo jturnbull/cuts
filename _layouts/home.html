@@ -3,6 +3,8 @@ layout: default
 ---
 {% assign events = site.events | sort: 'showdate' | reverse %}
 
+{% include banner.html %}
+
 {% for event in events limit:1 %}
 	<section class="mbr-box mbr-section mbr-section--relative mbr-section--fixed-size mbr-section--full-height mbr-section--bg-adapted" id="header1-2" data-bg-video="https://www.youtube.com/embed/{{ event.clip_id }}?rel=0&amp;autoplay=1&amp;loop=1">
 	    <div class="mbr-box__magnet mbr-box__magnet--sm-padding mbr-box__magnet--center-left mbr-after-navbar">

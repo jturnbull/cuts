@@ -1,0 +1,32 @@
+@font-face {
+font-family: 'Tondu Beta';
+font-style: normal;
+font-weight: normal;
+src: local('Tondu Beta'), url('/assets/shocktober/Tondu_Beta.woff') format('woff');
+}
+
+#shocks
+{ font-family:'Tondu Beta';
+color: #F5F5F5;
+font-weight:normal;
+}
+
+#shockhead
+{
+	margin-left: 30px;
+	padding-top: 5px;
+}
+
+#shockhead .oldie
+{
+		font-family: "PT Mono", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+#shockhead .heads
+{ font-size: 78px;
+	line-height: 0.8;
+}
+
+.red {
+	color: #C2362C;
+}
