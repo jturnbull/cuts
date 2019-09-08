@@ -5,13 +5,19 @@ font-weight: normal;
 src: local('Tondu Beta'), url('/assets/shocktober/Tondu_Beta.woff') format('woff');
 }
 
+@font-face {
+font-family: 'Underwood Champion';
+font-weight: normal;
+font-style: normal;
+src: local('Underwood Champion'), url('/assets/shocktober/underwood_champion.woff') format('woff');
+}
 
-
-#shocks, #shockhead
+#shocks, #shockhead, #merch
 { font-family:'Tondu Beta';
 color: #F5F5F5;
 font-weight:normal;
 background-color: #000;
+border-bottom: #FFF 4px solid;
 }
 
 #shockhead img
@@ -27,7 +33,7 @@ background-color: #000;
 
 #shockhead .oldie
 {
-		font-family: "PT Mono", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-family:'Underwood Champion';
 }
 
 #shockhead .heads
@@ -65,9 +71,10 @@ background-color: #000;
 
 .shockentry .deets
 {
+	margin-top: -28px;
 	font-size: 24px;
 	font-weight: normal;
-/*	text-transform: uppercase;*/
+	text-transform: uppercase;
 	color: #C2362C;
 	line-height: 1;
 	
@@ -75,7 +82,7 @@ background-color: #000;
 
 .shockentry .desc
 {
-	font-family: "PT Mono", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-family:'Underwood Champion';
 }
 
 .btn-danger {

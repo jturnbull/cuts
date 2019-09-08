@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign events = site.events_shocktober | sort: 'showdate' %}
+	{% assign events = site.events_shocktober | sort: 'showdate' %}
 
 <link rel="stylesheet" type="text/css" href="{{ "assets/shocktober/style.css" | relative_url }}"/>
 
@@ -35,18 +35,21 @@ layout: default
 {% for event in events %}
 		        <div class="row shockentry">
 					<div class="col-sm-3 col-sm-offset-1">
-						<img src="https://www.fillmurray.com/297/167" alt="">
+						<img src="{{ event.thumb | relative_url }}" alt="" width="297" height="167">
 					</div>
                     <div class="col-sm-6 col-sm-offset-1">
 <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
  <p class="mbr-hero__subtext deets">
 {% assign day = event.showdate | date: "%-d"  %}
 {{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
-{{ event.showdate | date: "%B %Y" }}<br>
-@ {{ event.location }}
-<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+
+{{ event.showdate | date: "%B" }}<br>
+{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}<br>
+{{ event.location }}
+
 </p>
-<div class="desc"> {{ event.content }}</div>
+<div class="desc">
+<p> {{ event.subtext}}</p>
+	{{ event.content }}</div>
 
 {% if event.booking_link %}
 <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a></div>
@@ -56,15 +59,50 @@ layout: default
 			</div>
 {% endfor %}
 
+		        <div class="row shockentry">
+					<div class="col-sm-3 col-sm-offset-1">
+						<img src="{{ "assets/shocktober/certificate.jpg" | relative_url }}" width="297" height="280" alt="Tees">
+					</div>
+                    <div class="col-sm-6 col-sm-offset-1">
+						<h1 class="mbr-hero__text">COMBO TICKET</h1>
+						 <p class="mbr-hero__subtext deets">
+							 WITH CERTIFICATE
+						 </p>
+						 <div class="desc">
+							 <p>							 Personalised A3 certificate to whoever survives all 6 movies in the festival!
+</p></div>
+<div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger" href="{{ event.booking_link }}" target="_blank">BUY COMBO TICKET</a></div>
 
-	                </div></div></div></section>
-	
-
-
+					</div>
+				</div>
+				
+	</div></div></div>
 
 
 </section>
 	
+	
+<section class="mbr-section mbr-section--relative mbr-section--fixed-size" id="merch" >
+	
+		    <div class="mbr-section__container mbr-section__container--sm-padding container">
+								
+		        <div class="row shockentry">
+					<div class="col-sm-3 col-sm-offset-1">
+						<img src="{{ "assets/shocktober/tees.jpg" | relative_url }}" width="297" height="245" alt="Tees">
+					</div>
+                    <div class="col-sm-6 col-sm-offset-1">
+						<h1 class="mbr-hero__text">SHOCKTOBER MERCH</h1>
+						 <p class="mbr-hero__subtext deets">
+							 Celebrate Oxford's first horror film festival with a limited edition tour t-shirt
+							 </p>
+						
+						<div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger" href="https://cinemaunderthestairs.teemill.com/product/shocktober-festival-u201919-tee/" target="_blank">BUY A TEE</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+						
+						
 
 {% include parallax.html %}
 		

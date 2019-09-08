@@ -2,8 +2,10 @@
 title: "The Exorcist"
 showdate: 2019-10-22
 price: 4
-location: "GLUT American Diner, 71 George St, OX1 2BQ"
+location: "GLUT American Diner, OX1 2BQ"
 booking_link: 
 fb_link: 
+thumb: /assets/shocktober/exorcist.jpg
+subtext: "1973 United States. William Friedkin"
 ---
-Chuck meets Dave, Brad meets Ed, Bonham-Carter meets Meatloaf's tit, boy meets girl, has a fight and fucks off home. It's Fight Club. Bosh.
+William Peter Blatty's best selling novel was brought to the screen by celebrated movie Brat, Friedkin, dealing havoc throughout the world. Fainting audience members, barf bags for punters, Mike Oldfield's haunting soundtrack; if ever celluloid has become legend, it is The Exorcist.
