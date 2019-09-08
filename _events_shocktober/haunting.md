@@ -2,7 +2,7 @@
 title: "The Haunting"
 showdate: 2019-10-23
 price: 4
-location: "Modern Art Oxford"
+location: "Modern Art Oxford, 30 Pembroke St, OX1 1BP"
 booking_link: 
 fb_link: 
 ---

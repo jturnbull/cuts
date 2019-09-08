@@ -2,7 +2,7 @@
 title: "Demons"
 showdate: 2019-10-20
 price: 9
-location: "The Ultimate Picture Palace"
+location: "The Ultimate Picture Palace, Jeune St, OX4 1BN"
 times: "Doors 8:00pm / Film 8:30pm"
 booking_link: https://www.wegottickets.com/event/480882
 fb_link: 

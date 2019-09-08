@@ -2,7 +2,7 @@
 title: "Evil Dead 2"
 showdate: 2019-10-24
 price: 4
-location: "The Jericho Tavern"
+location: "The Jericho Tavern, 56 Walton St, OX2 6AE"
 booking_link: 
 fb_link: 
 ---

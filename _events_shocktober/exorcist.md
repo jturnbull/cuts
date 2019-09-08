@@ -2,7 +2,7 @@
 title: "The Exorcist"
 showdate: 2019-10-22
 price: 4
-location: "Glut American Diner"
+location: "GLUT American Diner, 71 George St, OX1 2BQ"
 booking_link: 
 fb_link: 
 ---
