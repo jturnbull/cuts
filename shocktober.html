@@ -15,8 +15,8 @@ layout: default
 	                    <div class="col-sm-3 col-sm-offset-1">
 							<img src="{{ "assets/shocktober/logo.png" | relative_url }}" width="297" height="312" alt="Logo">
 						</div>
-							<div class="col-sm-7" id="shockhead">
-								<span class="oldie">OXFORD’S FIRST EVER HORROR FILM FESTIVAL</span><br>
+							<div class="col-sm-7 col-sm-offset-1" id="shockhead">
+								<p class="oldie">OXFORD’S FIRST EVER HORROR FILM FESTIVAL</p>
 								<span class="heads">
 								 6 FILMS<br>
 								 6 VENUES<br>
@@ -37,15 +37,16 @@ layout: default
 					<div class="col-sm-3 col-sm-offset-1">
 						<img src="https://www.fillmurray.com/297/167" alt="">
 					</div>
-                    <div class="col-sm-7">
+                    <div class="col-sm-7 col-sm-offset-1 shockentry">
 <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
- <p class="mbr-hero__subtext">
+ <p class="mbr-hero__subtext deets">
 {% assign day = event.showdate | date: "%-d"  %}
 {{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
 {{ event.showdate | date: "%B %Y" }}<br>
 @ {{ event.location }}
 <br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+
 </p>
+<div class="desc"> {{ event.content }}</div>
 
 {% if event.booking_link %}
 <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a></div>

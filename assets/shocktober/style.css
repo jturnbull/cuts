@@ -13,9 +13,9 @@ font-weight:normal;
 
 #shockhead
 {
-	margin-left: 30px;
 	padding-top: 5px;
 }
+
 
 #shockhead .oldie
 {
@@ -29,4 +29,27 @@ font-weight:normal;
 
 .red {
 	color: #C2362C;
+}
+
+.shockentry h1
+{
+	font-size: 32px;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.shockentry .deets
+{
+	font-size: 24px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #C2362C;
+	line-height: 1;
+	
+}
+
+.shockentry .desc
+{
+	font-family: "PT Mono", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
