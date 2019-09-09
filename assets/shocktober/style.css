@@ -1,93 +1,92 @@
 @font-face {
-font-family: 'Tondu Beta';
-font-style: normal;
-font-weight: normal;
-src: local('Tondu Beta'), url('/assets/shocktober/Tondu_Beta.woff') format('woff');
+  font-family: "Tondu Beta";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Tondu Beta"),
+    url("/assets/shocktober/Tondu_Beta.woff") format("woff");
 }
 
 @font-face {
-font-family: 'Underwood Champion';
-font-weight: normal;
-font-style: normal;
-src: local('Underwood Champion'), url('/assets/shocktober/underwood_champion.woff') format('woff');
+  font-family: "Underwood Champion";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Underwood Champion"),
+    url("/assets/shocktober/underwood_champion.woff") format("woff");
 }
 
-#shocks, #shockhead, #merch
-{ font-family:'Tondu Beta';
-color: #F5F5F5;
-font-weight:normal;
-background-color: #000;
-border-bottom: #FFF 4px solid;
+#shocks,
+#shockhead,
+#merch {
+  font-family: "Tondu Beta";
+  color: #f5f5f5;
+  font-weight: normal;
+  background-color: #000;
+  border-bottom: #fff 4px solid;
 }
 
-#shockhead img
-{
-	margin-bottom: 20px;
+#shockhead img {
+  margin-bottom: 20px;
 }
 
-#shockhead .col-sm-6
-{
-	padding-top: 5px;
+#shockhead .col-sm-6 {
+  padding-top: 5px;
 }
 
-
-#shockhead .oldie
-{
-	font-family:'Underwood Champion';
+#shockhead .oldie {
+  font-family: "Underwood Champion";
 }
 
-#shockhead .heads
-{ font-size: 78px;
-	line-height: 0.8;
+#shockhead .heads {
+  font-size: 78px;
+  line-height: 0.8;
 }
 
-@media (max-width: 576px) { 
-	#shockhead .heads
-	{ font-size: 47px;
-		line-height: 0.8;
-	}
- }
+@media (max-width: 576px) {
+  #shockhead .heads {
+    font-size: 47px;
+    line-height: 0.8;
+  }
+}
 
 .red {
-	color: #C2362C;
+  color: #c2362c;
 }
 
 .shockentry {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
-.shockentry img
-{
-	margin-bottom: 10px;
+.shockentry img {
+  margin-bottom: 10px;
 }
 
-.shockentry h1
-{
-	font-size: 32px;
-	font-weight: normal;
-	text-transform: uppercase;
-	padding-bottom: 20px;
+.shockentry h1 {
+  font-size: 32px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
-.shockentry .deets
-{
-	margin-top: -28px;
-	font-size: 24px;
-	font-weight: normal;
-	text-transform: uppercase;
-	color: #C2362C;
-	line-height: 1;
-	
+.shockentry .deets {
+  margin-top: -28px;
+  font-size: 24px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #c2362c;
+  line-height: 1;
 }
 
-.shockentry .desc
-{
-	font-family:'Underwood Champion';
+.shockentry .desc {
+  font-family: "Underwood Champion";
 }
 
 .btn-danger {
-	background-color: #C2362C;
-	border-color: #C2362C;
-	color: #FFF;
-	font-weight: normal;
+  background-color: #c2362c;
+  border-color: #c2362c;
+  color: #fff;
+  font-weight: normal;
+}
+
+.mbr-buttons {
+  margin-top: 0;
 }
