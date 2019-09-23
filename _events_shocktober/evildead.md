@@ -3,7 +3,6 @@ title: "Evil Dead 2"
 showdate: 2019-10-24
 price: 4
 location: "The Jericho Tavern, OX2 6AE"
-booking_link: http://www.wegottickets.com/event/482687
 fb_link:
 thumb: /assets/shocktober/evildead.jpg
 subtext: "1987 United States. Sam Raimi"

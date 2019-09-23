@@ -1,5 +1,5 @@
 ---
-title: "Demons"
+title: "Demons Plus Q&A with Mike Muncer from The Evolution of Horror Podcast"
 showdate: 2019-10-20
 price: 9
 location: "The Ultimate Picture Palace, OX4 1BN"

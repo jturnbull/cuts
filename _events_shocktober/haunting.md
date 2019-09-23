@@ -3,7 +3,6 @@ title: "The Haunting"
 showdate: 2019-10-23
 price: 4
 location: "Modern Art Oxford, OX1 1BP"
-booking_link: http://www.wegottickets.com/event/482685
 fb_link:
 thumb: /assets/shocktober/haunting.jpg
 subtext: "1963 United States. Robert Wise"

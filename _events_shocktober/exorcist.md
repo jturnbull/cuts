@@ -3,7 +3,6 @@ title: "The Exorcist"
 showdate: 2019-10-22
 price: 4
 location: "GLUT American Diner, OX1 2BQ"
-booking_link: http://www.wegottickets.com/event/482684
 fb_link:
 thumb: /assets/shocktober/exorcist.jpg
 subtext: "1973 United States. William Friedkin"
