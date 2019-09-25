@@ -1,5 +1,6 @@
 ---
-title: "In the Mouth of Madness Plus Q&A with Louise Blain"
+title: "In the Mouth of Madness"
+subtitle: "Plus Q&A with Louise Blain"
 showdate: 2019-10-28
 price: 4
 location: "The Jam Factory, OX1 1HU"

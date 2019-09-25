@@ -41,6 +41,7 @@ title: "Shocktober Festival by Cinema Under The Stairs"
                     <div class="col-sm-6 col-sm-offset-1">
 <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
  <p class="mbr-hero__subtext deets">
+{% if event.subtitle %}<span style="color: #FFF">{{ event.subtitle }}</span><br />{% endif %}
 {% assign day = event.showdate | date: "%-d"  %}
 {{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
 {{ event.showdate | date: "%B" }}<br>
