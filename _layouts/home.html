@@ -94,9 +94,15 @@ layout: default
   					          <h2>
   					            <a class="post-link" href="{{ event.url | relative_url }}">{{ event.title | escape }}</a>
   					          </h2>
-					          <span class="post-meta">{% assign day = event.showdate | date: "%-d"  %}
-								{{ event.showdate | date: "%-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
-								{{ event.showdate | date: "%B %Y" }}</span>
+					          <span class="post-meta">
+								  {% if event.displaydate %}
+									  {{ event.displaydate }}
+								  {% else %}
+									  {% assign day = event.showdate | date: "%-d"  %}
+									{{ event.showdate | date: "%-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
+									{{ event.showdate | date: "%B %Y" }}
+						  	  	{% endif %}
+							</span>
 							  </div>
 							  </div>
 
