@@ -31,8 +31,12 @@ layout: default
 								{{ event.showdate | date: "%B %Y" }}<br>
 								@ {{ event.location | default:"The Cellar, Oxford, OX1 3HZ" }}
 								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+<br>
-								Alcohol, popcorn, and prizes available<br>
-								<b>Limited tickets drop {{ event.showdate | date: "%-d" | minus:7 }} {{ event.showdate | date: "%B" }}</b></p>
+								Alcohol, popcorn, and prizes available
+								{% if event.booking_link %}
+								{% else %}
+								<br><b>Limited tickets drop {{ event.showdate | date: "%-d" | minus:7 }} {{ event.showdate | date: "%B" }}</b>
+				    				{% endif %}
+				    				</p>
 								
 	                    </div>
 						{% if event.vote_link %}
