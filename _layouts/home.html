@@ -27,22 +27,25 @@ layout: default
 	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
 	                        <p class="mbr-hero__subtext">
 								{% assign day = event.showdate | date: "%-d"  %}
+								{% assign today = site.time | date: "%s" | plus: 0 %}
+								{% assign ticketdate = event.showdate | date: "%s" | minus: 604800 %}
 								{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
 								{{ event.showdate | date: "%B %Y" }}<br>
-								@ {{ event.location | default:"The Cellar, Oxford, OX1 3HZ" }}
+								@ {{ event.location | default:"TBA" }}
 								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+<br>
 								Alcohol, popcorn, and prizes available
-								{% if event.booking_link %}
+								{% if event.booking_link and ticketdate < today %}
+								<br>SOLD OUT - contact us for waitlist
 								{% else %}
 								<br><b>Limited tickets drop {{ event.showdate | date: "%-d" | minus:7 }} {{ event.showdate | date: "%B" }}</b>
-				    				{% endif %}
-				    				</p>
+				    			{% endif %}
+				    		</p>
 								
 	                    </div>
 						{% if event.vote_link %}
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.vote_link }}" target="_blank">VOTE FOR THE FILM</a>
 						{% endif %}
-						{% if event.booking_link %}
+						{% if event.booking_link and ticketdate > today %}
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
 						{% else %}
 						{% endif %}
