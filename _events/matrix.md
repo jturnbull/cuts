@@ -7,5 +7,5 @@ location: "Tap Social Movement, Oxford, OX2 0LX"
 booking_link: https://www.wegottickets.com/sct/WEDQpBfEJm
 fb_link:
 poster_thumb:
-status: "presale" #selling, or soldout
+status: "selling" #selling, or soldout
 ---
