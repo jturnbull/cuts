@@ -34,20 +34,18 @@ layout: default
 								@ {{ event.location | default:"TBA" }}
 								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+<br>
 								Alcohol, popcorn, and prizes available
-								{% if event.booking_link and ticketdate < today %}
-								<br>SOLD OUT - contact us for waitlist
-								{% else %}
+								{% if event.status == "presale" %}
 								<br><b>Limited tickets drop {{ event.showdate | date: "%-d" | minus:7 }} {{ event.showdate | date: "%B" }}</b>
+								{% else %}
+								{% if event.status == "soldout" %}
+								<br><b>SOLD OUT - contact us for waitlist</b>
 				    			{% endif %}
+								{% endif %}
 				    		</p>
 								
 	                    </div>
-						{% if event.vote_link %}
-	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.vote_link }}" target="_blank">VOTE FOR THE FILM</a>
-						{% endif %}
-						{% if event.booking_link and ticketdate > today %}
+						{% if event.status == "selling" %}
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
-						{% else %}
 						{% endif %}
 							<a class="mbr-social-icons__icon socicon-bg-facebook  animated fadeInUp delay" title="Facebook" target="_blank" href="{% if event.fb_link %}{{ event.fb_link }}{% else %}https://www.facebook.com/CinemaUnderTheStairs/{% endif %}"><i class="socicon socicon-facebook"></i></a>    
 							<a class="mbr-social-icons__icon socicon-bg-twitter  animated fadeInUp delay" title="Twitter" target="_blank" href="https://twitter.com/CineUnderStairs"><i class="socicon socicon-twitter"></i></a>   
