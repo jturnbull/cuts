@@ -6,6 +6,6 @@ price: 5
 location: "Tap Social Movement, Oxford, OX2 0LX"
 booking_link: https://www.wegottickets.com/sct/WEDQpBfEJm
 fb_link:
-poster_thumb:
+poster_thumb: /assets/posters/matrix.jpg
 status: "soldout" #presale, selling, or soldout
 ---
