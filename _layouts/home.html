@@ -26,11 +26,15 @@ layout: default
 							 <p class="mbr-hero__intro">Cinema Under The Stairs presents…</p>
 	                        <h1 class="mbr-hero__text">{{ event.title | escape }}</h1>
 	                        <p class="mbr-hero__subtext">
+								{% if event.status == "postponed" %}
+								Postponed - new date TBA<br>
+								{% else %}
 								{% assign day = event.showdate | date: "%-d"  %}
 								{% assign today = site.time | date: "%s" | plus: 0 %}
 								{% assign ticketdate = event.showdate | date: "%s" | minus: 604800 %}
 								{{ event.showdate | date: "%A %-d" }}<sup>{% case day %}{% when '1' or '21' or '31' %}st{% when '2' or '22' %}nd{% when '3' or '23' %}rd{% else %}th{% endcase %}</sup>
 								{{ event.showdate | date: "%B %Y" }}<br>
+								{% endif %}
 								@ {{ event.location | default:"TBA" }}
 								<br>{{ event.times | default:"Doors 7:30pm / Film 8:30pm" }}. 18+<br>
 								Alcohol, popcorn, and prizes available
