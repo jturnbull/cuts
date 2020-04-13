@@ -51,6 +51,9 @@ layout: default
 						{% if event.status == "voting" %}
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.vote_link }}" target="_blank">VOTE FOR THE FILM</a>
 						{% endif %}
+				    		{% if event.status == "streaming" %}
+	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.stream_link }}" target="_blank">WATCH NOW</a>
+						{% endif %}
 						{% if event.status == "selling" %}
 	                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="{{ event.booking_link }}" target="_blank">GET TICKETS</a>
 						{% endif %}
