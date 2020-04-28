@@ -1,6 +1,6 @@
 ---
 title: "CUTSFIX Vote #4"
-showdate: 2020-04-27
+showdate: 2020-05-06
 clip_id: "UqBNiiHnTiQ"
 price: 0
 location: "Your Netflix account"
