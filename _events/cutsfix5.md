@@ -1,7 +1,7 @@
 ---
 title: "CUTSFIX #5"
 showdate: 2020-05-16
-clip_id: "UqBNiiHnTiQ"
+clip_id: "To4f-ODZmIE"
 price: 0
 location: "Your sofa with a loved one"
 times: "Virtual doors 8:00pm / Film 9:00pm"
