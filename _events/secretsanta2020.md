@@ -5,5 +5,6 @@ clip_id: "tUA5XlCFcCg"
 price: £10
 location: "The Ultimate Picture Palace, Jeune St, Oxford OX4 1BN"
 vote_link: https://cuts.typeform.com/to/jlWr2Dcz
-status: "voting" #voting, postponed, presale, selling, streaming or soldout
+booking_link: http://uppcinema.com/
+status: "selling" #voting, postponed, presale, selling, streaming or soldout
 ---
