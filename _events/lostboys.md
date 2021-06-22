@@ -1,5 +1,5 @@
 ---
-title: "Lost Boys"
+title: "The Lost Boys"
 showdate: 2021-06-28
 clip_id: "3O9eNa36_i0"
 price: 24
